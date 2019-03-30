@@ -1,0 +1,169 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>ΑΨBPL</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'webapp/css/bootstrap.css' %}" type = "text/css"/>
+	
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/cover/">
+    <style>
+
+    html {
+  		height: 100%;
+ 		box-sizing: border-box;
+	}
+	*,
+	*:before,
+	*:after {
+ 		 box-sizing: inherit;
+	}
+	body {
+  		position: relative;
+  		margin: 0;
+  		padding-bottom: 2rem;
+  		min-height: 100%;
+	}
+	.bd-footer {
+		position: absolute;
+  		bottom: 0;
+  		left: 0;
+  		width: 100%;
+    	text-align: center;
+    	color: rgba(255, 255, 255, .5);
+	}
+	#container {
+   		min-height:100%;
+   		margin: 0 auto;
+   		position:relative;
+	}
+      .bd-placeholder-img {
+      	
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .modal-header {
+    background: radial-gradient(white, white);
+    backgroundcolor: black;
+    </style>
+    {% block content %}
+	{% include "webapp/includes/htmlsnippet.html" %}
+	{% endblock %}
+    <!-- Custom styles for this template -->
+    <link href="static/webapp/css/coverV2.css" rel="stylesheet">
+  </head>
+<body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <nav class="site-header sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2  type="button" class="btn btn-primary" style="text-decoration: none" data-toggle="modal" data-target=".bd-example-modal-sm"" href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Home</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg><h4>ˇ</h4>
+    </a>                 
+    <div class="nav-item">
+		<a class="py-2 d-none d-md-inline-block dropdown-toggle" href="#" id="navbar-contact" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Rules
+          </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'rules' %}">Game Rules</a>
+          <a class="dropdown-item" href="{% url 'leaguerules' %}">ΑΨBPL Rules</a>
+        </div>
+        </div>
+    <a class="py-2 d-none d-md-inline-block" href="{% url 'roster' %}">Rosters</a>
+    <a class="py-2 d-none d-md-inline-block" href="{% url 'teamstandings' %}">Team Standings</a>
+    <a class="py-2 d-none d-md-inline-block" href="{% url 'playerstats' %}">Player Stats</a>
+    <div class="nav-item">
+		<a class="py-2 d-none d-md-inline-block dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font color="grey">Schedule</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'games' %}">Season Schedule</a>
+          <a class="dropdown-item disabled" href="#">Playoff Bracket</a>
+        </div>
+        </div>
+        
+  </div>
+</nav>
+    </div>
+  </header>
+
+<main role="main" class="inner cover px-1">
+   <h1 class="cover-heading pb-3">Game Rules</h1>
+     <ul class="list-group list-group-flush pb-5">
+  <li class="list-group-item"><h4>Cups Per Side</h4>All games are played with <b>10</b> Cups on each side.</li>
+
+  <li class="list-group-item"><h4>Warm Ups</h4>To warm up before your game, each team will play a quick 3 cup a side game.</li>
+    <li class="list-group-item"><h4>First Shot</h4>To determine which team will shoot first, both teams play a quick game of rock paper scissors. Games are <b>not</b> determined by eye to eye.</li>
+    <li class="list-group-item"><h4>Timeouts</h4>Each team is only allowed a single 30 second timeout per game.</li>
+  
+    
+  <li class="list-group-item"><h4>Half-time</h4>Once 10 cups remain from the original 20, both teams receive a 1 minute break during which they have to take 1 shot of alcohol of their choice.</li>
+  <li class="list-group-item"><h4>Re-Racks</h4>You are allowed to reorganize the cups into the formation of your choosing. You can only re-rack at the beginning of a turn. You can not re-rack on a "balls back." Each team is allowed 2 re-racks a game. All re-racks must be arranged at the <b>tip</b> of the cup triangle.</li>
+  <li class="list-group-item"><h4>Deflections</h4>If a ball bounces off of one or more cups then in, it <b>only</b> counts for 1 cup, the cup it landed in.</li>
+  <li class="list-group-item"><h4>Celeb Shots</h4>A celebrity shot is when one of the members of a team forfeits their own shot and allows someone who is not a part of the game top take it for them. Each team is allowed two celebrity shots a game.</li>
+  <li class="list-group-item"><h4>Air-balls</h4>When someone's shot misses the table completely without touching a cup it is considered an air-ball. If the first shooter for a team air-balls, then the second shooter loses their shot and if they take the shot it will not count, regardless of if they sink it or not. The team defending does <b>not</b> need to call air-ball for it to be considered an air-ball.  Air-balls are <b>not</b> counted when shooting for the the last cup. </li>
+  
+  <li class="list-group-item"><h4>Elbows Rule</h4>When you are shooting your elbow can <b>not</b> cross your end of the table.  If you are called on “elbows” then your shot is invalid and you lose your shot for that turn. If you are continuously called on “elbows” then you will have to drink a disciplinary shot of alcohol.</li>
+  <li class="list-group-item"><h4>Redemption</h4>Once one team sinks all 10 cups, the other team then enters redemption.  During redemption your goal is to sink 1 cup in order to continue playing the game. If you hit that cup the game resumes, and the cup you sank remains in play. If both or all redemption shots are missed then the game is over. If the team that forces redemption hits the last cup <b>once</b>, then the other team has two redemption shots.  If the team that forces redemption his the last cup <b>more</b> than once then, the other team will only receive one redemption shot.</li>
+
+  <li class="list-group-item"><h4>Bounces</h4>If the shooting player is able to bounce the ball off the table and into a cup then that shot will count for 2 cups. The cups removed are the cup the ball landed in, as well as a cup of the defenders choosing. The ball may bounce as many times as you like on its way into a cup. Defenders however <b>are</b> allowed to block bounced balls from entering their cups either by catching then or swatting them away.</li>
+  <li class="list-group-item"><h4>Balls Back</h4>If both players sink different cups on the same turn, then they will receive the balls back and be allowed to shoot again. If both players on a team sink the <b>same</b> cup on the same turn, then 3 cups will be taken out of play and they recieve balls back.  The 3 cups removed are determined by: the cup sank, a cup of the defenders choosing, and a cup of the attackers choosing.</li>
+  <li class="list-group-item"><h4>Naked Mile</h4>When a team loses a game without hitting a single cup, then they have been “naked miled”.  Once a team is naked miled they must run a designated distance naked as a punishment. If a team is naked miled and chooses not to run, then they receive a large team point penalty as well as a large player point penalty. If a player is uncomfortable running naked, then they are allowed to run in their underwear.  If a player is <b>extremely</b> uncomfortable running naked, then they can discuss it with a league official and a solution can be negotiated.</li>
+  <li class="list-group-item"><h4>Gentleman's cup</h4>When a single cup remains, <b>and</b> that cup is at the very back edge of the table, then the shooting team is allowed to call “gentleman's cup”. After calling this the defending team will move the final cup <b>1</b> cups length away from the back edge of the table towards the attacking side.  Gentlemans cup must be called at the start of the turn.</li>
+  <li class="list-group-item"><h4>Death Cup</h4> If a cup is sunk on the table it must be removed from play. You remove cups at the end of the round. If you fail to remember to remove a cup and the other team sinks that cup again your team automatically losses the game.</li>
+  <li class="list-group-item"><h4>Balls Out</h4>If the first shooter for a team sinks a cup the defending team must <b>immediately</b> pull the ball out of that cup.  The shooting team is <b>not</b> required to call “balls out” in order to have the ball removed from the cup.  If a team forgets to pull the ball out and it affects the second shooters shot, <b>in any way</b>, they will be awarded a re-shot.</li>
+  <li class="list-group-item"><h4>Man On Fire</h4>After a player sinks 2 cups in a row they are considered “heating up”.  Once a player is heating up they <b>must announce it to the referee</b>. If that player then hits their next shot (for a total of 3 consecutive shots) they are now “man on fire”. After announcing to the ref that you are man on fire, you are allowed to shoot until you miss. Once you miss you are no longer on fire and the game resumes normally. You must call “heating up” and “man on fire” at the start of your turn.</li>
+  <li class="list-group-item"><h4>Island Rule</h4>If at any point during the game a cup is isolated from the others by at least one cups length then it is considered an island and you are allowed to use your “island shot” on that cup. Once you call “island shot” your team must then <b>specify to the ref</b> which cup you are shooting for (as multiple cups in play may be isolated and eligible for the island shot). Also you must use your island shot at the start of a round.  Once you have called island and specified which cup you are shooting for, then both players shooting will attempt to sink that cup.  If you shoot after calling island and sink a cup that is <b>not</b> the island cup, then it will not count and remain in play. If a team happens to hit the island cup, then 3 cups will be removed from play (the cup sank, a cup of the attackers choosing, and a cup of the defenders choosing). Air-ball rules will apply to the first shooter shooting and if they airball the second player will lose their shot. If the first shooter hit the island, then the second shooter will shoot normally. If the second shooter hits any cup that isn't the island cup, after the first shooter sinks island, then 4 cups will be removed and they will receive balls back. However if the first and second player <b>both</b> hit the island cup, then 5 cups will be removed (island cup, 2 cups of defenders choice, 2 cups of attackers choice) and they will receive the balls back. Bounce shots are not allowed during the entire turn that “island” is called. Each team is only allowed to call island <b>once</b> in a game.</li>
+  <li class="list-group-item"><h4>Trick Shots</h4>If a team shoots a ball and it lands <b>on the table</b> then it is a live ball. If the balls rolls off the table and hits the ground, then it is a dead ball. If the defenders retrieve the a live ball then it is a dead ball and the game resumes normally.  If the attacking team retrieves the ball, they are then allowed to attempt a “trick shot”. A trick shot is any shot that is classified as difficult. To determine if a shot is tricky enough you must explain the shot to the referee before you attempt it. If it is considered tricky enough they will give you the go ahead. Left handed/weakhanded shots are <b>not</b> allowed. Trick shots are allowed to bounce up to 2 times before the defenders are allowed to block the shot. If a trick shot is scored then it will count as 1 cup, regardless of if it. bounced in or not. If a shot deviates too far from the shot originally described, then the referee reserves the right to judge whether the shot is valid or not.</li>
+  <li class="list-group-item"><h4>Defending</h4>If the attacking team attempts to bounce shot the ball, the defending is allowed to swat or block the ball from going in. If the attacking team shoots the ball normally and it bounces up off the rim of a cup, then the defending team is allowed to block or swat the ball away.  If the attacking team shoots the ball and it spins around the inside of the cup then the defenders are allowed to finger or blow the ball out of the cup. Men must <b>finger</b> and women must <b>blow</b> the balls to retrieve them.  If a man blows or a woman fingers successfully, then it will not count as a cup against.  The player will instead have to take a disciplinary shot of the alcohol of their choosing. Defending teams must also defend from <b>behind</b> their end of the table, and are not allowed to defend from the sides of the table. If a normal shot is blocked in any way before it touches the rim of a cup then the shooting side is awarded a re-shot and the defending perpetrator must take a disciplinary shot of the alcohol of their choosing.</li>
+</ul>
+
+</main>
+<div class="modal fade bd-example-modal-sm px-4" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-content">
+      <div class="list-group">
+	      <a href="{% url 'index' %}" class="btn btn-lg btn-secondary">
+	      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Home</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+	      Home
+	  	  </a>
+	      <a href="{% url 'rules' %}" class="btn btn-lg btn-secondary active">Game Rules</a>
+	      <a href="{% url 'leaguerules' %}" class="btn btn-lg btn-secondary">ΑΨBPL Rules</a>
+	      <a href="{% url 'roster' %}" class="btn btn-lg btn-secondary">Roster</a>
+	      <a href="{% url 'teamstandings' %}" class="btn btn-lg btn-secondary">Team Standings</a>
+	      <a href="{% url 'playerstats' %}" class="btn btn-lg btn-secondary">Player Stats</a>
+	      <a href="{% url 'games' %}" class="btn btn-lg btn-secondary">Season Schedule</a>
+	      <a href="#" class="btn btn-lg btn-secondary disabled">Playoff Bracket</a>
+	  </div>
+    </div>
+  </div>
+</div>
+
+<footer class="bd-footer mt-auto">
+ <div class="inner">
+   <p>Website By <a href="#">ΑΨBPL℠</a>.</p>
+ </div>
+</footer>
+</div>
+</body>
+<script src="static/webapp/js/bootstrap.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</html>

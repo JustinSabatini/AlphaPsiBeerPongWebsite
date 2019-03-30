@@ -1,0 +1,764 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>ΑΨBPL</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'webapp/css/bootstrap.css' %}" type = "text/css"/>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/cover/">
+    <style>
+
+    html {
+  		height: 100%;
+ 		box-sizing: border-box;
+	}
+		.max{
+    max-height:175px;
+    max-width:175px;
+    height:auto;
+    width:100%;
+	*,
+	*:before,
+	*:after {
+ 		 box-sizing: inherit;
+	}
+	@media (min-width: 576px){
+.modal-dialog {
+    max-width: 700px;
+    margin: 1.75rem auto;
+    }
+    }
+	body {
+	    color: #343a40;
+  		position: relative;
+  		margin: 0;
+  		padding-bottom: 2rem;
+  		min-height: 100%;
+	}
+	.bd-footer {
+		position: absolute;
+  		bottom: 0;
+  		left: 0;
+  		width: 100%;
+    	text-align: center;
+    	color: rgba(255, 255, 255, .5);
+	}
+	body.modal-open {
+	bodyScrollLock.disableBodyScroll(targetElement);
+    overflow: hidden;
+}
+
+	#container {
+   		min-height:100%;
+   		margin: 0 auto;
+   		position:relative;
+	}
+      .bd-placeholder-img {
+      	
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+          }
+          .modal-dialog {
+    		max-width: 700px;
+   			margin: 1.75rem auto;
+        }
+      }
+      .modal-header {
+    background: radial-gradient(white, white);
+    backgroundcolor: black;
+   
+    </style>
+    
+    {% block content %}
+	{% include "webapp/includes/htmlsnippet.html" %}
+	{% endblock %}
+    <!-- Custom styles for this template -->
+    <link href="static/webapp/css/coverV2.css" rel="stylesheet">
+    <style>
+     body {
+	    color: #343a40;
+	    }
+	@media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+          }
+          .modal-dialog {
+    		max-width: 700px;
+   			margin: 1.75rem auto;
+        }
+      }
+      .btn-seethru {
+    color: #ffffff;
+    text-shadow: none;
+    background-color: #fff0;
+    border: .05rem solid #fff0;
+}
+    </style>
+  </head>
+<body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <nav class="site-header sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2  type="button" class="btn btn-primary" style="text-decoration: none" data-toggle="modal" data-target=".bd-example-modal-sm"" href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Home</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg><h4>ˇ</h4>
+    </a>                 
+    <div class="nav-item">
+		<a class="py-2 d-none d-md-inline-block dropdown-toggle" href="#" id="navbar-contact" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Rules
+          </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'rules' %}">Game Rules</a>
+          <a class="dropdown-item" href="{% url 'leaguerules' %}">ΑΨBPL Rules</a>
+        </div>
+        </div>
+    <a class="py-2 d-none d-md-inline-block" href="{% url 'roster' %}">Rosters</a>
+    <a class="py-2 d-none d-md-inline-block" href="{% url 'teamstandings' %}">Team Standings</a>
+    <a class="py-2 d-none d-md-inline-block" href="{% url 'playerstats' %}">Player Stats</a>
+    <div class="nav-item">
+		<a class="py-2 d-none d-md-inline-block dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font color="grey">Schedule</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'games' %}">Season Schedule</a>
+          <a class="dropdown-item disabled" href="#">Playoff Bracket</a>
+        </div>
+        </div>
+        
+  </div>
+</nav>
+    </div>
+  </header>
+
+<main role="main" class="inner cover p-0">
+<div class="m-auto ">
+<h1 class="pt-2 pb-4"><font color="white">League Roster</font></h1>
+<div class="container-fluid mb-4">
+<div class="row justify-content-md-center mt-2">
+  
+  <div class="col-fluid m-auto mb-2">
+    <div class="card-sm mb-4" style="width: 16rem;">
+  <div class="card-body">
+    <a href="#" class="btn btn-seethru" data-toggle="modal" data-target="#Modal2"><h5 class="card-title">Big Bad Cobras</h5><img src="static\webapp\img\BigBadCobras.png" class="card-img-top" alt="..."></a>
+  </div>
+</div>
+</div>
+<div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Big Bad Cobras</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <div class="container-fluid">
+        <div class="row">
+        	<div class="col-sm-5">
+        		<img src="static\webapp\img\BigBadCobras.png" alt="..." class="max">
+        	</div>
+        	<div class="col-sm-7">
+        		<div class="row">
+        			<div class="col">
+        				<h5>Rank</h5>
+        				<p>{{ bbcrank }}</p>
+        			</div>
+        			<div class="col">
+        				<h5>Record</h5>
+        				<p>{{ bbcrecord }}</p>
+        			</div>
+        		</div>
+        		<div class="row">
+        			<p>Bio: n/a</p>
+        		</div>
+        	</div>
+        </div>
+      </div>
+      </div>
+        
+      <div class="modal-footer">
+      <div class="container-fluid">
+      <h5 class="modal-title align-center" id="exampleModalLongTitle">Players</h5>
+      <div class="row mt-3">
+	      <div class="col-fluid m-auto mb-2">
+					    	<div class="card mb-3" style="width: 16rem;">
+				  <img class="card-img-top max mx-auto mt-3" src="static\webapp\img\ProfileBlank.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">Jane Doe</h5>
+				    <p class="card-text">To be, or not to be?</p>
+				  </div>
+				</div>
+	  	  </div>
+	  	  <div class="col-fluid m-auto mb-2">
+					    	<div class="card mb-3" style="width: 16rem;">
+				  <img class="card-img-top max mx-auto mt-3" src="static\webapp\img\ProfileBlank.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">John Doe</h5>
+				    <p class="card-text">Hello World!</p>
+				  </div>
+				</div>
+	  	  </div>
+	  	  </div>
+	      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-fluid m-auto mb-2">
+    <div class="card-sm mb-4" style="width: 16rem;">
+  <div class="card-body">
+    <a href="#" class="btn btn-seethru" data-toggle="modal" data-target="#Modal3"><h5 class="card-title">Blue Balls</h5><img src="static\webapp\img\BlueBalls.png" class="card-img-top" alt="..."></a>
+  </div>
+</div>
+  </div>
+<div class="modal fade" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Blue Balls</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <div class="container-fluid">
+        <div class="row">
+        	<div class="col-sm-5">
+        		<img src="static\webapp\img\BlueBalls.png" alt="..." class="max">
+        	</div>
+        	<div class="col-sm-7">
+        		<div class="row">
+        			<div class="col">
+        				<h5>Rank</h5>
+        				<p>{{ bbrank }}</p>
+        			</div>
+        			<div class="col">
+        				<h5>Record</h5>
+        				<p>{{ bbrecord }}</p>
+        			</div>
+        		</div>
+        		<div class="row">
+        			<p>Bio: n/a</p>
+        		</div>
+        	</div>
+        </div>
+      </div>
+      </div>
+        
+      <div class="modal-footer">
+      <div class="container-fluid">
+      <h5 class="modal-title align-center" id="exampleModalLongTitle">Players</h5>
+      <div class="row mt-3">
+	      <div class="col-fluid m-auto mb-2">
+					    	<div class="card mb-3" style="width: 16rem;">
+				  <img class="card-img-top max mx-auto mt-3" src="static\webapp\img\ProfileBlank.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">Jane Doe</h5>
+				    <p class="card-text">To be, or not to be?</p>
+				  </div>
+				</div>
+	  	  </div>
+	  	  <div class="col-fluid m-auto mb-2">
+					    	<div class="card mb-3" style="width: 16rem;">
+				  <img class="card-img-top max mx-auto mt-3" src="static\webapp\img\ProfileBlank.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">John Doe</h5>
+				    <p class="card-text">Hello World!</p>
+				  </div>
+				</div>
+	  	  </div>
+	  	  </div>
+	      </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="col-fluid m-auto mb-2">
+    <div class="card-sm mb-4" style="width: 16rem;">
+  <div class="card-body">
+    <a href="#" class="btn btn-seethru" data-toggle="modal" data-target="#Modal4"><h5 class="card-title">Greened Out</h5><img src="static\webapp\img\GreenedOut.png" class="card-img-top" alt="..."></a>
+  </div>
+</div>
+  </div>
+<div class="modal fade" id="Modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Greened Out</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <div class="container-fluid">
+        <div class="row">
+        	<div class="col-sm-5">
+        		<img src="static\webapp\img\GreenedOut.png" alt="..." class="max">
+        	</div>
+        	<div class="col-sm-7">
+        		<div class="row">
+        			<div class="col">
+        				<h5>Rank</h5>
+        				<p>{{ gorank }}</p>
+        			</div>
+        			<div class="col">
+        				<h5>Record</h5>
+        				<p>{{ gorecord }}</p>
+        			</div>
+        		</div>
+        		<div class="row">
+        			<p>Bio: n/a</p>
+        		</div>
+        	</div>
+        </div>
+      </div>
+      </div>
+        
+      <div class="modal-footer">
+      <div class="container-fluid">
+      <h5 class="modal-title align-center" id="exampleModalLongTitle">Players</h5>
+      <div class="row mt-3">
+	      <div class="col-fluid m-auto mb-2">
+					    	<div class="card mb-3" style="width: 16rem;">
+				  <img class="card-img-top max mx-auto mt-3" src="static\webapp\img\ProfileBlank.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">Jane Doe</h5>
+				    <p class="card-text">To be, or not to be?</p>
+				  </div>
+				</div>
+	  	  </div>
+	  	  <div class="col-fluid m-auto mb-2">
+					    	<div class="card mb-3" style="width: 16rem;">
+				  <img class="card-img-top max mx-auto mt-3" src="static\webapp\img\ProfileBlank.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">John Doe</h5>
+				    <p class="card-text">Hello World!</p>
+				  </div>
+				</div>
+	  	  </div>
+	  	  </div>
+	      </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="col-fluid m-auto mb-2">
+    <div class="card-sm mb-4" style="width: 16rem;">
+  <div class="card-body">
+    <a href="#" class="btn btn-seethru" data-toggle="modal" data-target="#Modal5"><h5 class="card-title">Kamikaze Shots</h5><img src="static\webapp\img\KamikazeShots.png" class="card-img-top" alt="..."></a>
+  </div>
+</div>
+  </div>
+<div class="modal fade" id="Modal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Kamikaze Shots</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <div class="container-fluid">
+        <div class="row">
+        	<div class="col-sm-5">
+        		<img src="static\webapp\img\KamikazeShots.png" alt="..." class="max">
+        	</div>
+        	<div class="col-sm-7">
+        		<div class="row">
+        			<div class="col">
+        				<h5>Rank</h5>
+        				<p>{{ ksrank }}</p>
+        			</div>
+        			<div class="col">
+        				<h5>Record</h5>
+        				<p>{{ ksrecord }}</p>
+        			</div>
+        		</div>
+        		<div class="row">
+        			<p>Bio: n/a</p>
+        		</div>
+        	</div>
+        </div>
+      </div>
+      </div>
+        
+      <div class="modal-footer">
+      <div class="container-fluid">
+      <h5 class="modal-title align-center" id="exampleModalLongTitle">Players</h5>
+      <div class="row mt-3">
+	      <div class="col-fluid m-auto mb-2">
+					    	<div class="card mb-3" style="width: 16rem;">
+				  <img class="card-img-top max mx-auto mt-3" src="static\webapp\img\ProfileBlank.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">Jane Doe</h5>
+				    <p class="card-text">To be, or not to be?</p>
+				  </div>
+				</div>
+	  	  </div>
+	  	  <div class="col-fluid m-auto mb-2">
+					    	<div class="card mb-3" style="width: 16rem;">
+				  <img class="card-img-top max mx-auto mt-3" src="static\webapp\img\ProfileBlank.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">John Doe</h5>
+				    <p class="card-text">Hello World!</p>
+				  </div>
+				</div>
+	  	  </div>
+	  	  </div>
+	      </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="col-fluid m-auto mb-2">
+    <div class="card-sm mb-4" style="width: 16rem;">
+  <div class="card-body">
+    <a href="#" class="btn btn-seethru" data-toggle="modal" data-target="#Modal6"><h5 class="card-title">Magic Johnsons</h5><img src="static\webapp\img\MagicJohnsons.png" class="card-img-top" alt="..."></a>
+  </div>
+</div>
+  </div>
+<div class="modal fade" id="Modal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Magic Johnsons</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <div class="container-fluid">
+        <div class="row">
+        	<div class="col-sm-5">
+        		<img src="static\webapp\img\MagicJohnsons.png" alt="..." class="max">
+        	</div>
+        	<div class="col-sm-7">
+        		<div class="row">
+        			<div class="col">
+        				<h5>Rank</h5>
+        				<p>{{ mjrank }}</p>
+        			</div>
+        			<div class="col">
+        				<h5>Record</h5>
+        				<p>{{ mjrecord }}</p>
+        			</div>
+        		</div>
+        		<div class="row">
+        			<p>Bio: n/a</p>
+        		</div>
+        	</div>
+        </div>
+      </div>
+      </div>
+        
+      <div class="modal-footer">
+      <div class="container-fluid">
+      <h5 class="modal-title align-center" id="exampleModalLongTitle">Players</h5>
+      <div class="row mt-3">
+	      <div class="col-fluid m-auto mb-2">
+					    	<div class="card mb-3" style="width: 16rem;">
+				  <img class="card-img-top max mx-auto mt-3" src="static\webapp\img\ProfileBlank.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">Jane Doe</h5>
+				    <p class="card-text">To be, or not to be?</p>
+				  </div>
+				</div>
+	  	  </div>
+	  	  <div class="col-fluid m-auto mb-2">
+					    	<div class="card mb-3" style="width: 16rem;">
+				  <img class="card-img-top max mx-auto mt-3" src="static\webapp\img\ProfileBlank.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">John Doe</h5>
+				    <p class="card-text">Hello World!</p>
+				  </div>
+				</div>
+	  	  </div>
+	  	  </div>
+	      </div>
+      </div>
+    </div>
+  </div>
+</div> 
+<div class="col-fluid m-auto mb-2">
+    <div class="card-sm mb-4" style="width: 16rem;">
+  <div class="card-body">
+    <a href="#" class="btn btn-seethru" data-toggle="modal" data-target="#Modal1"><h5 class="card-title">Pink Panthers</h5><img src="static\webapp\img\PinkPanthers.png" class="card-img-top" alt="..."></a>
+  </div>
+</div>
+  </div>
+<div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Pink Panthers</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <div class="container-fluid">
+        <div class="row">
+        	<div class="col-sm-5">
+        		<img src="static\webapp\img\PinkPanthers.png" alt="..." class="max">
+        	</div>
+        	<div class="col-sm-7">
+        		<div class="row">
+        			<div class="col">
+        				<h5>Rank</h5>
+        				<p>{{ pprank }}</p>
+        			</div>
+        			<div class="col">
+        				<h5>Record</h5>
+        				<p>{{ pprecord }}</p>
+        			</div>
+        		</div>
+        		<div class="row">
+        			<p>Bio: n/a</p>
+        		</div>
+        	</div>
+        </div>
+      </div>
+      </div>
+        
+      <div class="modal-footer">
+      <div class="container-fluid">
+      <h5 class="modal-title align-center" id="exampleModalLongTitle">Players</h5>
+      <div class="row mt-3">
+	      <div class="col-fluid m-auto mb-2">
+					    	<div class="card mb-3" style="width: 16rem;">
+				  <img class="card-img-top max mx-auto mt-3" src="static\webapp\img\ProfileBlank.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">Jane Doe</h5>
+				    <p class="card-text">To be, or not to be?</p>
+				  </div>
+				</div>
+	  	  </div>
+	  	  <div class="col-fluid m-auto mb-2">
+					    	<div class="card mb-3" style="width: 16rem;">
+				  <img class="card-img-top max mx-auto mt-3" src="static\webapp\img\ProfileBlank.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">John Doe</h5>
+				    <p class="card-text">Hello World!</p>
+				  </div>
+				</div>
+	  	  </div>
+	  	  </div>
+	      </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="col-fluid m-auto mb-2">
+    <div class="card-sm mb-4" style="width: 16rem;">
+  <div class="card-body">
+    <a href="#" class="btn btn-seethru" data-toggle="modal" data-target="#Modal7"><h5 class="card-title">Purple Drank</h5><img src="static\webapp\img\PurpleDrank.png" class="card-img-top" alt="..."></a>
+  </div>
+</div>
+  </div>
+<div class="modal fade" id="Modal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Purple Drank</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <div class="container-fluid">
+        <div class="row">
+        	<div class="col-sm-5">
+        		<img src="static\webapp\img\PurpleDrank.png" alt="..." class="max">
+        	</div>
+        	<div class="col-sm-7">
+        		<div class="row">
+        			<div class="col">
+        				<h5>Rank</h5>
+        				<p>{{ pdrank }}</p>
+        			</div>
+        			<div class="col">
+        				<h5>Record</h5>
+        				<p>{{ pdrecord }}</p>
+        			</div>
+        		</div>
+        		<div class="row">
+        			<p>Bio: n/a</p>
+        		</div>
+        	</div>
+        </div>
+      </div>
+      </div>
+        
+      <div class="modal-footer">
+      <div class="container-fluid">
+      <h5 class="modal-title align-center" id="exampleModalLongTitle">Players</h5>
+      <div class="row mt-3">
+	      <div class="col-fluid m-auto mb-2">
+					    	<div class="card mb-3" style="width: 16rem;">
+				  <img class="card-img-top max mx-auto mt-3" src="static\webapp\img\ProfileBlank.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">Jane Doe</h5>
+				    <p class="card-text">To be, or not to be?</p>
+				  </div>
+				</div>
+	  	  </div>
+	  	  <div class="col-fluid m-auto mb-2">
+					    	<div class="card mb-3" style="width: 16rem;">
+				  <img class="card-img-top max mx-auto mt-3" src="static\webapp\img\ProfileBlank.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">John Doe</h5>
+				    <p class="card-text">Hello World!</p>
+				  </div>
+				</div>
+	  	  </div>
+	  	  </div>
+	      </div>
+      </div>
+    </div>
+  </div>
+</div> 
+    <div class="col-fluid m-auto mb-2">
+    <div class="card-sm mb-4" style="width: 16rem;">
+  <div class="card-body">
+    <a href="#" class="btn btn-seethru" data-toggle="modal" data-target="#Modal8"><h5 class="card-title">White Russians</h5><img src="static\webapp\img\WhiteRussians.png" class="card-img-top" alt="..."></a>
+  </div>
+</div>
+  </div>
+<div class="modal fade" id="Modal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">White Russians</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <div class="container-fluid">
+        <div class="row">
+        	<div class="col-sm-5">
+        		<img src="static\webapp\img\WhiteRussians.png" alt="..." class="max">
+        	</div>
+        	<div class="col-sm-7">
+        		<div class="row">
+        			<div class="col">
+        				<h5>Rank</h5>
+        				<p>{{ wrrank }}</p>
+        			</div>
+        			<div class="col">
+        				<h5>Record</h5>
+        				<p>{{ wrecord }}</p>
+        			</div>
+        		</div>
+        		<div class="row">
+        			<p>Bio: n/a</p>
+        		</div>
+        	</div>
+        </div>
+      </div>
+      </div>
+        
+      <div class="modal-footer">
+      <div class="container-fluid">
+      <h5 class="modal-title align-center" id="exampleModalLongTitle">Players</h5>
+      <div class="row mt-3">
+	      <div class="col-fluid m-auto mb-2">
+					    	<div class="card mb-3" style="width: 16rem;">
+				  <img class="card-img-top max mx-auto mt-3" src="static\webapp\img\ProfileBlank.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">Jane Doe</h5>
+				    <p class="card-text">To be, or not to be?</p>
+				  </div>
+				</div>
+	  	  </div>
+	  	  <div class="col-fluid m-auto mb-2">
+					    	<div class="card mb-3" style="width: 16rem;">
+				  <img class="card-img-top max mx-auto mt-3" src="static\webapp\img\ProfileBlank.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">John Doe</h5>
+				    <p class="card-text">Hello World!</p>
+				  </div>
+				</div>
+	  	  </div>
+	  	  </div>
+	      </div>
+      </div>
+    </div>
+  </div>
+</div> 
+  </div>
+<div class="mastfoot mt-auto pt-4">
+ <div class="inner">
+   <p>Website By <a href="#">ΑΨBPL℠</a>.</p>
+ </div>
+</vid>
+</div>
+</div>
+</div>
+
+</main>
+<style>
+     body {
+	    color: #343a40;
+	    }
+	@media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+          }
+          .modalsmall {
+    		max-width: 300px;
+   			margin: 1.75rem auto;
+        }
+      }
+      .btn-seethru {
+    color: #ffffff;
+    text-shadow: none;
+    background-color: #fff0;
+    border: .05rem solid #fff0;
+}
+    </style>
+<div class="modal fade bd-example-modal-sm px-4" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-content">
+      <div class="list-group">
+	      <a href="{% url 'index' %}" class="btn btn-lg btn-secondary">
+	      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Home</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+	      Home
+	  	  </a>
+	      <a href="{% url 'rules' %}" class="btn btn-lg btn-secondary">Game Rules</a>
+	      <a href="{% url 'leaguerules' %}" class="btn btn-lg btn-secondary">ΑΨBPL Rules</a>
+	      <a href="{% url 'roster' %}" class="btn btn-lg btn-secondary active">Roster</a>
+	      <a href="{% url 'teamstandings' %}" class="btn btn-lg btn-secondary">Team Standings</a>
+	      <a href="{% url 'playerstats' %}" class="btn btn-lg btn-secondary">Player Stats</a>
+	      <a href="{% url 'games' %}" class="btn btn-lg btn-secondary">Season Schedule</a>
+	      <a href="#" class="btn btn-lg btn-secondary disabled">Playoff Bracket</a>
+	  </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+<script src="static/webapp/js/bootstrap.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</html>

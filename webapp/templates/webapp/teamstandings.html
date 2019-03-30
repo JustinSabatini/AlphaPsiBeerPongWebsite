@@ -1,0 +1,243 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>ΑΨBPL</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'webapp/css/bootstrap.css' %}" type = "text/css"/>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/cover/">
+    <style>
+
+    html {
+  		height: 100%;
+ 		box-sizing: border-box;
+	}
+	*,
+	*:before,
+	*:after {
+ 		 box-sizing: inherit;
+	}
+	body {
+  		position: relative;
+  		margin: 0;
+  		padding-bottom: 1rem;
+  		min-height: 100%;
+	}
+			.max{
+    max-height:175px;
+    max-width:175px;
+    min-height:100px;
+    min-width:100px;
+    height:auto;
+    width:100%;
+    }
+	.bd-footer {
+		position: absolute;
+  		bottom: 0;
+  		left: 0;
+  		width: 100%;
+    	text-align: center;
+    	color: rgba(255, 255, 255, .5);
+	}
+	#container {
+   		min-height:100%;
+   		margin: 0 auto;
+   		position:relative;
+	}
+      .bd-placeholder-img {
+      	
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .modal-header {
+    background: radial-gradient(white, white);
+    backgroundcolor: black;
+    </style>
+    {% block content %}
+	{% include "webapp/includes/htmlsnippet.html" %}
+	{% endblock %}
+    <!-- Custom styles for this template -->
+    <link href="static/webapp/css/coverV2.css" rel="stylesheet">
+  </head>
+<body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <nav class="site-header sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2  type="button" class="btn btn-primary" style="text-decoration: none" data-toggle="modal" data-target=".bd-example-modal-sm"" href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Home</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg><h4>ˇ</h4>
+    </a>                 
+    <div class="nav-item">
+		<a class="py-2 d-none d-md-inline-block dropdown-toggle" href="#" id="navbar-contact" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Rules
+          </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'rules' %}">Game Rules</a>
+          <a class="dropdown-item" href="{% url 'leaguerules' %}">ΑΨBPL Rules</a>
+        </div>
+        </div>
+    <a class="py-2 d-none d-md-inline-block" href="{% url 'roster' %}">Rosters</a>
+    <a class="py-2 d-none d-md-inline-block" href="{% url 'teamstandings' %}">Team Standings</a>
+    <a class="py-2 d-none d-md-inline-block" href="{% url 'playerstats' %}">Player Stats</a>
+    <div class="nav-item">
+		<a class="py-2 d-none d-md-inline-block dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font color="grey">Schedule</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'games' %}">Season Schedule</a>
+          <a class="dropdown-item disabled" href="#">Playoff Bracket</a>
+        </div>
+        </div>
+        
+  </div>
+</nav>
+    </div>
+  </header>
+
+<main role="main" class="inner cover">
+    <h2 class="cover-heading" >Team Standings</h2>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.css" rel="stylesheet"/>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
+    <table data-toggle="table" id="example" class="table table-striped table-bordered pt-4" style="width:100%" data-sort-name="rank">
+        <thead>
+            <tr>
+            	<th data-field="rank" data-sortable="true">Rank</th>
+            	<th data-field="logo" data-sortable="false">Logo</th>
+                <th data-field="team" data-sortable="true">Team </th>
+                <th data-field="games_played" data-sortable="true"><span title="Games Played">GP</span></th>
+                <th data-field="record" data-sortable="false"><span title="Record">Record</span></th>
+                <th data-field="plus_minus" data-sortable="true"><span title="+/-">+/-</span></th>
+                <th data-field="total_points" data-sortable="true"><span title="Points">Points</span></th>    
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            
+            	<td><h4>{{ bbcrank }}</h4></td>
+            	<td><img src="static\webapp\img\BigBadCobras.png" alt="..." class="max"></td>
+                <td><div class="container"><div class="row-sm"></div><div class="row-sm">Big Bad Cobras</div></div></td>
+                <td>{{ bbcgp }}</td>
+                <td>{{ bbcrecord }}</td>
+                <td>{{ bbcplusminus }}</td>
+                <td>{{ bbcpoints }}</td>
+            </tr>
+            <tr>
+            	<td><h4>{{ bbrank }}</h4></td>
+            	<td><img src="static\webapp\img\BlueBalls.png" alt="..." class="max"></td>
+                <td><div class="container"><div class="row-sm"></div><div class="row-sm">Blue Balls</div></div></td>
+                <td>{{ bbgp }}</td>
+                <td>{{ bbrecord }}</td>
+                <td>{{ bbplusminus }}</td>
+                <td>{{ bbpoints }}</td>
+            </tr>
+            <tr>
+            	<td><h4>{{ gorank }}</h4></td>
+            	<td><img src="static\webapp\img\GreenedOut.png" alt="..." class="max"></td>
+                <td><div class="container"><div class="row-sm"></div><div class="row-sm">Greened Out</div></div></td>
+                <td>{{ gogp }}</td>
+                <td>{{ gorecord }}</td>
+                <td>{{ goplusminus }}</td>
+                <td>{{ gopoints }}</td>
+            </tr>
+            <tr>
+            	<td><h4>{{ ksrank }}</h4></td>
+            	<td><img src="static\webapp\img\KamikazeShots.png" alt="..." class="max"></td>
+                <td><div class="container"><div class="row-sm"></div><div class="row-sm">Kamikaze Shots</div></div></td>
+                <td>{{ ksgp }}</td>
+                <td>{{ ksrecord }}</td>
+                <td>{{ ksplusminus }}</td>
+                <td>{{ kspoints }}</td>
+            </tr>
+            <tr>
+            	<td><h4>{{ mjrank }}</h4></td>
+            	<td><img src="static\webapp\img\MagicJohnsons.png" alt="..." class="max"></td>
+                <td><div class="container"><div class="row-sm"></div><div class="row-sm">Magic Johnsons</div></div></td>
+                <td>{{ mjgp }}</td>
+                <td>{{ mjrecord }}</td>
+                <td>{{ mjplusminus }}</td>
+                <td>{{ mjpoints }}</td>
+            </tr>
+            <tr>
+            	<td><h4>{{ pprank }}</h4></td>
+            	<td><img src="static\webapp\img\PinkPanthers.png" alt="..." class="max"></td>
+                <td><div class="container"><div class="row-sm"></div><div class="row-sm">Pink Panthers</div></div></td>
+                <td>{{ ppgp }}</td>
+                <td>{{ pprecord }}</td>
+                <td>{{ ppplusminus }}</td>
+                <td>{{ pppoints }}</td>
+            </tr>
+            <tr>
+            	<td><h4>{{ pdrank }}</h4></td>
+            	<td><img src="static\webapp\img\PurpleDrank.png" alt="..." class="max"></td>
+                <td><div class="container"><div class="row-sm"></div><div class="row-sm">Purple Drank</div></div></td>
+                <td>{{ pdgp }}</td>
+                <td>{{ pdrecord }}</td>
+                <td>{{ pdplusminus }}</td>
+                <td>{{ pdpoints }}</td>
+            </tr>
+            <tr>
+            	<td><h4>{{ wrrank }}</h4></td>
+            	<td><img src="static\webapp\img\WhiteRussians.png" alt="..." class="max"></td>
+                <td><div class="container"><div class="row-sm"></div><div class="row-sm">White Russians</div></div></td>
+                <td>{{ wrgp }}</td>
+                <td>{{ wrrecord }}</td>
+                <td>{{ wrplusminus }}</td>
+                <td>{{ wrpoints }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+      
+
+</main>
+<div class="modal fade bd-example-modal-sm px-4" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-content">
+      <div class="list-group">
+	      <a href="{% url 'index' %}" class="btn btn-lg btn-secondary">
+	      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Home</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+	      Home
+	  	  </a>
+	      <a href="{% url 'rules' %}" class="btn btn-lg btn-secondary">Game Rules</a>
+	      <a href="{% url 'leaguerules' %}" class="btn btn-lg btn-secondary">ΑΨBPL Rules</a>
+	      <a href="{% url 'roster' %}" class="btn btn-lg btn-secondary">Roster</a>
+	      <a href="{% url 'teamstandings' %}" class="btn btn-lg btn-secondary active">Team Standings</a>
+	      <a href="{% url 'playerstats' %}" class="btn btn-lg btn-secondary">Player Stats</a>
+	      <a href="{% url 'games' %}" class="btn btn-lg btn-secondary">Season Schedule</a>
+	      <a href="#" class="btn btn-lg btn-secondary disabled">Playoff Bracket</a>
+	  </div>
+    </div>
+  </div>
+</div>
+
+<footer class="mastfoot mt-auto pt-4">
+ <div class="inner">
+   <p>Website By <a href="#">ΑΨBPL℠</a>.</p>
+ </div>
+</footer>
+</div>
+</body>
+<script src="static/webapp/js/bootstrap.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</html>

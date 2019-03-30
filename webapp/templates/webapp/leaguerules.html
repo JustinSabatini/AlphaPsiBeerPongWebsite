@@ -1,0 +1,152 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>ΑΨBPL</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'webapp/css/bootstrap.css' %}" type = "text/css"/>
+	
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/cover/">
+    <style>
+
+    html {
+  		height: 100%;
+ 		box-sizing: border-box;
+	}
+	*,
+	*:before,
+	*:after {
+ 		 box-sizing: inherit;
+	}
+	body {
+  		position: relative;
+  		margin: 0;
+  		padding-bottom: 2rem;
+  		min-height: 100%;
+	}
+	.bd-footer {
+		position: absolute;
+  		bottom: 0;
+  		left: 0;
+  		width: 100%;
+    	text-align: center;
+    	color: rgba(255, 255, 255, .5);
+	}
+	#container {
+   		min-height:100%;
+   		margin: 0 auto;
+   		position:relative;
+	}
+      .bd-placeholder-img {
+      	
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .modal-header {
+    background: radial-gradient(white, white);
+    backgroundcolor: black;
+    </style>
+    {% block content %}
+	{% include "webapp/includes/htmlsnippet.html" %}
+	{% endblock %}
+    <!-- Custom styles for this template -->
+    <link href="static/webapp/css/coverV2.css" rel="stylesheet">
+  </head>
+<body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <nav class="site-header sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2  type="button" class="btn btn-primary" style="text-decoration: none" data-toggle="modal" data-target=".bd-example-modal-sm"" href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Home</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg><h4>ˇ</h4>
+    </a>                 
+    <div class="nav-item">
+		<a class="py-2 d-none d-md-inline-block dropdown-toggle" href="#" id="navbar-contact" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Rules
+          </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'rules' %}">Game Rules</a>
+          <a class="dropdown-item" href="{% url 'leaguerules' %}"><font color="grey">ΑΨBPL Rules</font></a>
+        </div>
+        </div>
+    <a class="py-2 d-none d-md-inline-block" href="{% url 'roster' %}">Rosters</a>
+    <a class="py-2 d-none d-md-inline-block" href="{% url 'teamstandings' %}">Team Standings</a>
+    <a class="py-2 d-none d-md-inline-block" href="{% url 'playerstats' %}">Player Stats</a>
+    <div class="nav-item">
+		<a class="py-2 d-none d-md-inline-block dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Schedule
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'games' %}">Season Schedule</a>
+          <a class="dropdown-item disabled" href="#">Playoff Bracket</a>
+        </div>
+        </div>
+        
+  </div>
+</nav>
+    </div>
+  </header>
+
+<main role="main" class="inner cover px-1">
+   <h1 class="cover-heading pb-3">ΑΨBPL Rules</h1>
+     <ul class="list-group list-group-flush pb-5">
+  		<li class="list-group-item"><h4>Points</h4>Regular season games are scored as follows: a win is 2 points, a 1 on 1 cup loss is 1 point, and a loss is 0 points.</li>
+  		<li class="list-group-item"><h4>Teams</h4>The A.P.B.P.L will consists of 8 teams of 2 players.  If league demand is high then there may be a few teams of three.  Once the full roster for the season is set, players will randomly be placed on teams.  If a player is uncomfortable with a random teammate please notify the league and we will arrange for you to play with someone you are familiar with.</li>
+    	<li class="list-group-item"><h4>All-Star Game</h4>The all-star game will be a friendly 10 cup game between the top 8 ranked players of the regular season. There will be 2 all star games (2 games of 2v2) and they will take place after the games on match day 4.  The Skills competition will also be between the top 8 ranked players and will also be after the games on match day 4.</li>
+    	<li class="list-group-item"><h4>Sportsmanship</h4>Sportsmanship is the most important part of the A.P.B.P.L.  It is after all a meaningless game of beer pong at the end of the day.  Every team <b>must</b> participate in a handshake after every game and show their sportsmanship.  If any team refuses to shake hands with another after a game then they will be kick from the league plain and simple.  The league is about fun so if any player is has any concerns about other players or teams please come see or message Brandon Sabatini directly and any situation will be resolved.  If any members in the league are continuously accused of lack of sportsmanship they will be removed from the league.</li> 
+  		<li class="list-group-item"><h4>Substitute Players</h4>If for any reason a player is unable to attend a match day, then please notify the league before hand. If for whatever reason you can not make it then your teammate can shoot your shots for you and if both teammates are unable to attend then you team will be given 1-2 substitute players to fill in, depending on the situation.  If you have a teammate missing and you do not wish to take their shots for them, then a sub player can be provided upon request. In the event that a player is removed from the league then a substitute player will take their place on the roster.  In order to make sure the selection of which sub plays is fair, we will randomly select which sub will play from a predetermined pool of sub players.</li>
+  		<li class="list-group-item"><h4>Uniforms</h4>The A.P.B.P.L will provide each player in the league with a team uniform for each game.  The league will hold onto the uniform throughout the season and wash them after every match day, and at the end of the season they will be given to each player to keep.</li>
+  		<li class="list-group-item"><h4>MVP</h4>At the end of the regular season the player with the highest point total will be awarded the title of MVP.  They will be given this award at the end of the final tournament play day during the winners award ceremony.</li>
+  		<li class="list-group-item"><h4>Celeb Shots</h4>A celebrity shot is when one of the members of a team forfeits their own shot and allows someone who is not a part of the game top take it for them. Each team is allowed two celebrity shots a game.</li>
+  		<li class="list-group-item"><h4>Fees</h4>In order to make the league the best it can be and offer the most to the players each player looking to participate will be asked to pay a fee of 15 dollars. The money will go towards each player receiving a custom team t-shirt, construction and maintenance of the website, statistics of each game, creation of player bios and automatically updated ranking systems, the all-star game and skills competition, promotional videos and league trailers, a custom made league trophy and MVP award, closing award ceremonies, purchases of alcohol, the hosting of multiple play days and final tournament, creation of custom beer pong tables, construction and operation of social media pages, scheduling games and teams, and maintaining league order.  Please keep in mind that the A.P.B.P.L is a <b>non</b>-profit league and all money received will be put right into the league to make it the best possible.</li>
+</ul>
+
+</main>
+<div class="modal fade bd-example-modal-sm px-4" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-content">
+      <div class="list-group">
+	      <a href="{% url 'index' %}" class="btn btn-lg btn-secondary">
+	      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Home</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+	      Home
+	  	  </a>
+	      <a href="{% url 'rules' %}" class="btn btn-lg btn-secondary">Game Rules</a>
+	      <a href="{% url 'leaguerules' %}" class="btn btn-lg btn-secondary active">ΑΨBPL Rules</a>
+	      <a href="{% url 'roster' %}" class="btn btn-lg btn-secondary">Roster</a>
+	      <a href="{% url 'teamstandings' %}" class="btn btn-lg btn-secondary">Team Standings</a>
+	      <a href="{% url 'playerstats' %}" class="btn btn-lg btn-secondary">Player Stats</a>
+	      <a href="{% url 'games' %}" class="btn btn-lg btn-secondary">Season Schedule</a>
+	      <a href="#" class="btn btn-lg btn-secondary disabled">Playoff Bracket</a>
+	  </div>
+    </div>
+  </div>
+</div>
+
+<footer class="bd-footer mt-auto">
+ <div class="inner">
+   <p>Website By <a href="#">ΑΨBPL℠</a>.</p>
+ </div>
+</footer>
+</div>
+</body>
+<script src="static/webapp/js/bootstrap.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</html>

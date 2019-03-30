@@ -1,0 +1,135 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Cover Template · Bootstrap</title>
+	{% load staticfiles %}
+	
+	<link rel="stylesheet" href="{% static 'webapp/css/bootstrap.css' %}" type = "text/css"/>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/cover/">
+
+    <!-- Bootstrap core CSS -->
+
+
+
+    <style>
+    #grad1 {
+  height: 200px;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /* Standard syntax (must be last) */
+}
+      .bd-placeholder-img {
+      	
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="static/css/cover.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead ">
+    <div class="inner">
+      <nav class="site-header sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2  type="button" class="btn btn-primary" style="text-decoration: none" data-toggle="modal" data-target=".bd-example-modal-sm"" href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Home</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg><h4>ˇ</h4>
+    </a>                 
+    <div class="nav-item">
+		<a class="py-2 d-none d-md-inline-block dropdown-toggle" href="#" id="navbar-contact" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Rules
+          </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Game Rules</a>
+          <a class="dropdown-item" href="#">ΑΨBPL Rules</a>
+        </div>
+        </div>
+    <a class="py-2 d-none d-md-inline-block" href="#">Rosters</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Team Standings</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Player Stats</a>
+    <div class="nav-item">
+		<a class="py-2 d-none d-md-inline-block dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Schedule
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Upcoming Games</a>
+          <a class="dropdown-item" href="#">Previous Games</a>
+          <a class="dropdown-item disabled" href="#">Playoff Bracket</a>
+        </div>
+        </div>
+        
+  </div>
+</nav>
+    </div>
+  </header>
+<div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
+    <h1 class="cover-heading pb-3">Game Rules</h1>
+     <ul class="list-group list-group-flush">
+  <li class="list-group-item">-Everyone Takes a shot once there’s -10 cups total left</li>
+  <li class="list-group-item">-2 re racks</li>
+  <li class="list-group-item">-10 cups</li>
+  <li class="list-group-item">-2 celebs</li>
+  <li class="list-group-item">-2 refs per game</li>
+  <li class="list-group-item">-No air ball last cup</li>
+  <li class="list-group-item">-Bounce is 2 cups</li>
+  <li class="list-group-item">-Same cup twice is 3 cups, balls back </li>
+  <li class="list-group-item">-Both sink is balls back</li>
+  <li class="list-group-item">-If you bounce off one cup into another one both cups are gone (max 2 cups)</li>
+  <li class="list-group-item">-Man on fire in play</li>
+  <li class="list-group-item">-1 time-out per game </li>
+  <li class="list-group-item">-gentleman’s cup </li>
+</ul>
+</div>
+
+
+
+  </main>
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-content">
+      <div class="list-group">
+	      <a href="#" class="btn btn-lg btn-secondary active">
+	      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Home</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+	      Home
+	  	  </a>
+	      <a href="#" class="btn btn-lg btn-secondary">Game Rules</a>
+	      <a href="#" class="btn btn-lg btn-secondary">ΑΨBPL Rules</a>
+	      <a href="#" class="btn btn-lg btn-secondary">Rosters</a>
+	      <a href="#" class="btn btn-lg btn-secondary">Team Standings</a>
+	      <a href="#" class="btn btn-lg btn-secondary">Player Stats</a>
+	      <a href="#" class="btn btn-lg btn-secondary">Upcoming Games</a>
+	      <a href="#" class="btn btn-lg btn-secondary">Previous Games</a>
+	      <a href="#" class="btn btn-lg btn-secondary disabled">Playoff Bracket</a>
+	  </div>
+    </div>
+  </div>
+</div>  
+
+<footer class="mastfoot mt-auto">
+ <div class="inner">
+   <p>Website By <a href="#">ΑΨBPL℠</a>.</p>
+ </div>
+</footer>
+</div>
+</body>
+<script src="static/webapp/js/bootstrap.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</html>
+

@@ -1,0 +1,877 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>ΑΨBPL</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'webapp/css/bootstrap.css' %}" type = "text/css"/>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/cover/">
+    <style>
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
+    position: relative;
+    width: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.containerimg {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  opacity:1;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+    html {
+  		height: 100%;
+ 		box-sizing: border-box;
+	}
+	.resize {
+    font-size: 3px;
+    /* 100 = view port width, as 1vw = 1/100th of that
+       So if the container is 50% of view port (as here)
+       then factor that into how you want it to size.
+       Let's say you like 5vw if it were the whole width,
+       then for this container, size it at 2.5vw (5 * .5 [i.e. 50%])
+    */
+    font-size: 2.5vw; 
+}
+	*,
+	*:before,
+	*:after {
+ 		 box-sizing: inherit;
+	}
+	.date {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+	body {
+	    color: #343a40;
+  		position: relative;
+  		margin: 0;
+  		padding-bottom: 2rem;
+  		min-height: 100%;
+	}
+	.max{
+    max-height:150px;
+    max-width:150px;
+    height:auto;
+    width:100%;
+}
+	.bd-footer {
+		position: absolute;
+  		bottom: 0;
+  		left: 0;
+  		width: 100%;
+    	text-align: center;
+    	color: rgba(255, 255, 255, .5);
+	}
+	#container {
+   		min-height:100%;
+   		margin: 0 auto;
+   		position:relative;
+	}
+      .bd-placeholder-img {
+      	
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+        .pl-4, .px-4 {
+    padding-left: 15rem !important;
+}
+.pr-4, .px-4 {
+    padding-right: 15rem !important;
+}
+      }
+      .modal-header {
+    background: radial-gradient(white, white);
+    backgroundcolor: black;	
+    </style>
+    {% block content %}
+	{% include "webapp/includes/htmlsnippet.html" %}
+	{% endblock %}
+    <!-- Custom styles for this template -->
+    <link href="static/webapp/css/coverV2.css" rel="stylesheet">
+    <style>
+     body {
+	    color: #343a40;
+	    }
+    </style>
+  </head>
+<body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <nav class="site-header sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2  type="button" class="btn btn-primary" style="text-decoration: none" data-toggle="modal" data-target=".bd-example-modal-sm"" href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Home</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg><h4>ˇ</h4>
+    </a>                 
+    <div class="nav-item">
+		<a class="py-2 d-none d-md-inline-block dropdown-toggle" href="#" id="navbar-contact" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Rules
+          </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'rules' %}">Game Rules</a>
+          <a class="dropdown-item" href="{% url 'leaguerules' %}">ΑΨBPL Rules</a>
+        </div>
+        </div>
+    <a class="py-2 d-none d-md-inline-block" href="{% url 'roster' %}">Rosters</a>
+    <a class="py-2 d-none d-md-inline-block" href="{% url 'teamstandings' %}">Team Standings</a>
+    <a class="py-2 d-none d-md-inline-block" href="{% url 'playerstats' %}">Player Stats</a>
+    <div class="nav-item">
+		<a class="py-2 d-none d-md-inline-block dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font color="grey">Schedule</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'games' %}">Season Schedule</a>
+          <a class="dropdown-item disabled" href="#">Playoff Bracket</a>
+        </div>
+        </div>
+        
+  </div>
+</nav>
+    </div>
+  </header>
+
+<main role="main" class="inner cover px-0">
+<div class="m-auto pb-3">
+<h1 class="mb-3"><font color="white">Schedule</font></h1>
+<p class="mb-1">
+  <a class="btn btn-secondary dropdown-toggle px-4 mb-3 py-2" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    <b>Match Day 1</b>  - Date TBD
+  </a>
+</p>
+<div class="collapse pb-3 show" id="collapseExample">
+<div class="card text-center">
+  <div class="card-header pb-0">
+    <div class="row mb-2">
+    <div class="col-md-auto"><h4 align="left" class="mb-0">Match Day 1</h4></div>
+    <div class="col-7 date text-muted mb-0"><p align="left" class="mb-0">Date TBD</p></div>
+    <div class="col date text-muted"><p align="right" class="mb-0">Score</p></div>
+    </div>
+  </div>
+  <div class="card-body pt-1 pb-1">
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 1</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\BigBadCobras.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Big Bad Cobras</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\WhiteRussians.png" alt="Avatar" class="max">
+  <p class="mb-0">White Russians</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 2</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\BlueBalls.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Blue Balls</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\PurpleDrank.png" alt="Avatar" class="max">
+  <p class="mb-0">Purple Drank</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 3</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\GreenedOut.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Greened Out</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\PinkPanthers.png" alt="Avatar" class="max">
+  <p class="mb-0">Pink Panthers</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 4</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\KamikazeShots.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Kamikaze Shots</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\MagicJohnsons.png" alt="Avatar" class="max">
+  <p class="mb-0">Magic Johnsons</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 5</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\BigBadCobras.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Big Bad Cobras</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\PurpleDrank.png" alt="Avatar" class="max">
+  <p class="mb-0">Purple Drank</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 6</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\BlueBalls.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Blue Balls</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\PinkPanthers.png" alt="Avatar" class="max">
+  <p class="mb-0">Pink Panthers</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 7</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\KamikazeShots.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Kamikaze Shots</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\WhiteRussians.png" alt="Avatar" class="max">
+  <p class="mb-0">White Russians</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 8</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\GreenedOut.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Greened Out</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\MagicJohnsons.png" alt="Avatar" class="max">
+  <p class="mb-0">Magic Johnsons</p>
+    </div>
+    </div>
+    </li>
+  
+</ul>
+  </div>
+</div>
+</div>
+
+
+<p class="mb-1">
+  <a class="btn btn-secondary dropdown-toggle px-4 mb-3 py-2" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">
+    <b>Match Day 2</b>  - Date TBD
+  </a>
+</p>
+<div class="collapse pb-3" id="collapseExample2">
+<div class="card text-center">
+  <div class="card-header pb-0">
+    <div class="row mb-2">
+    <div class="col-md-auto"><h4 align="left" class="mb-0">Match Day 2</h4></div>
+    <div class="col-7 date text-muted mb-0"><p align="left" class="mb-0">Date TBD</p></div>
+    <div class="col date text-muted"><p align="right" class="mb-0">Score</p></div>
+    </div>
+  </div>
+  <div class="card-body pt-1 pb-1">
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 1</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\WhiteRussians.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">White Russians</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\PurpleDrank.png" alt="Avatar" class="max">
+  <p class="mb-0">Purple Drank</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 2</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\PinkPanthers.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Pink Panthers</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\MagicJohnsons.png" alt="Avatar" class="max">
+  <p class="mb-0">Magic Johnsons</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 3</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\KamikazeShots.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Kamikaze Shots</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\GreenedOut.png" alt="Avatar" class="max">
+  <p class="mb-0">Greened Out</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 4</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\BlueBalls.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Blue Balls</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\BigBadCobras.png" alt="Avatar" class="max">
+  <p class="mb-0">Big Bad Cobras</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 5</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\WhiteRussians.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">White Russians</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\MagicJohnsons.png" alt="Avatar" class="max">
+  <p class="mb-0">Magic Johnsons</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 6</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\PinkPanthers.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Pink Panthers</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\PurpleDrank.png" alt="Avatar" class="max">
+  <p class="mb-0">Purple Drank</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 7</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\KamikazeShots.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Kamikaze Shots</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\BigBadCobras.png" alt="Avatar" class="max">
+  <p class="mb-0">Big Bad Cobras</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 8</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\BlueBalls.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Blue Balls</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\GreenedOut.png" alt="Avatar" class="max">
+  <p class="mb-0">Greened Out</p>
+    </div>
+    </div>
+    </li>
+  
+</ul>
+  </div>
+</div>
+</div>
+
+
+<p class="mb-1">
+  <a class="btn btn-secondary dropdown-toggle px-4 mb-3 py-2" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample">
+    <b>Match Day 3</b>  - Date TBD
+  </a>
+</p>
+<div class="collapse pb-3" id="collapseExample3">
+<div class="card text-center">
+  <div class="card-header pb-0">
+    <div class="row mb-2">
+    <div class="col-md-auto"><h4 align="left" class="mb-0">Match Day 3</h4></div>
+    <div class="col-7 date text-muted mb-0"><p align="left" class="mb-0">Date TBD</p></div>
+    <div class="col date text-muted"><p align="right" class="mb-0">Score</p></div>
+    </div>
+  </div>
+  <div class="card-body pt-1 pb-1">
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 1</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\BlueBalls.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Blue Balls</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\KamikazeShots.png" alt="Avatar" class="max">
+  <p class="mb-0">Kamikaze Shots</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 2</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\PinkPanthers.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Pink Panthers</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\BigBadCobras.png" alt="Avatar" class="max">
+  <p class="mb-0">Big Bad Cobras</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 3</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\GreenedOut.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Greened Out</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\WhiteRussians.png" alt="Avatar" class="max">
+  <p class="mb-0">White Russians</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 4</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\PurpleDrank.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Purple Drank</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\MagicJohnsons.png" alt="Avatar" class="max">
+  <p class="mb-0">Magic Johnsons</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 5</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\BigBadCobras.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Big Bad Cobras</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\GreenedOut.png" alt="Avatar" class="max">
+  <p class="mb-0">Greened Out</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 6</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\BlueBalls.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Blue Balls</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\MagicJohnsons.png" alt="Avatar" class="max">
+  <p class="mb-0">Magic Johnsons</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 7</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\PurpleDrank.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Purple Drank</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\KamikazeShots.png" alt="Avatar" class="max">
+  <p class="mb-0">Kamikaze Shots</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 8</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\WhiteRussians.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">White Russians</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\PinkPanthers.png" alt="Avatar" class="max">
+  <p class="mb-0">Pink Panthers</p>
+    </div>
+    </div>
+    </li>
+  
+</ul>
+  </div>
+</div>
+</div>
+
+<p class="mb-1">
+  <a class="btn btn-secondary dropdown-toggle px-4 mb-3 py-2" data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample">
+    <b>Match Day 4</b>  - Date TBD
+  </a>
+</p>
+<div class="collapse pb-3" id="collapseExample4">
+<div class="card text-center">
+  <div class="card-header pb-0">
+    <div class="row mb-2">
+    <div class="col-md-auto"><h4 align="left" class="mb-0">Match Day 4</h4></div>
+    <div class="col-7 date text-muted mb-0"><p align="left" class="mb-0">Date TBD</p></div>
+    <div class="col date text-muted"><p align="right" class="mb-0">Score</p></div>
+    </div>
+  </div>
+  <div class="card-body pt-1 pb-1">
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 1</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\BigBadCobras.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Big Bad Cobras</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\MagicJohnsons.png" alt="Avatar" class="max">
+  <p class="mb-0">Magic Johnsons</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 2</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\BlueBalls.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Blue Balls</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\WhiteRussians.png" alt="Avatar" class="max">
+  <p class="mb-0">White Russians</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 3</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\GreenedOut.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Greened Out</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\PurpleDrank.png" alt="Avatar" class="max">
+  <p class="mb-0">Purple Drank</p>
+    </div>
+    </div>
+    </li>
+        <li class="list-group-item px-0">    
+  	<div class="row mb-0 pr-3 mb-2">
+    <div class="col-md-auto">
+    	<p align="left" class="mb-0">Game 4</p>
+    </div>
+    <div class="col-md-auto date text-muted"></div>
+    <div class="col date text-muted p-0 mt-0"><p align="right" class="mb-0 text-muted">TBD</p></div>
+    </div>
+    <div class="row mb-0"> 
+    <div class="col-5 px-0">
+    <div><img src="static\webapp\img\PinkPanthers.png" alt="Avatar" class="max"></div> 
+  <p class="mb-0">Pink Panthers</p>
+    </div>
+  <div class="col-2 my-auto px-0"><div class="my-auto"><h4>VS</h4>
+    </div></div>
+    <div class="col-5 px-0">
+  <img src="static\webapp\img\KamikazeShots.png" alt="Avatar" class="max">
+  <p class="mb-0">Kamikaze Shots</p>
+    </div>
+    </div>
+    </li>
+        
+  
+</ul>
+  </div>
+</div>
+</div>
+
+
+</div>
+</div>
+</main>
+<div class="modal fade bd-example-modal-sm px-4" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-content">
+      <div class="list-group">
+	      <a href="{% url 'index' %}" class="btn btn-lg btn-secondary">
+	      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Home</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+	      Home
+	  	  </a>
+	      <a href="{% url 'rules' %}" class="btn btn-lg btn-secondary">Game Rules</a>
+	      <a href="{% url 'leaguerules' %}" class="btn btn-lg btn-secondary">ΑΨBPL Rules</a>
+	      <a href="{% url 'roster' %}" class="btn btn-lg btn-secondary">Roster</a>
+	      <a href="{% url 'teamstandings' %}" class="btn btn-lg btn-secondary">Team Standings</a>
+	      <a href="{% url 'playerstats' %}" class="btn btn-lg btn-secondary">Player Stats</a>
+	      <a href="{% url 'games' %}" class="btn btn-lg btn-secondary active">Season Schedule</a>
+	      <a href="#" class="btn btn-lg btn-secondary disabled">Playoff Bracket</a>
+	  </div>
+    </div>
+  </div>
+</div>
+
+<footer class="bd-footer mt-auto">
+ <div class="inner">
+   <p>Website By <a href="#">ΑΨBPL℠</a>.</p>
+ </div>
+</footer>
+</div>
+</body>
+<script src="static/webapp/js/bootstrap.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</html>
